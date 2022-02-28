@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Helpdesk Help</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+
+            function processText (form){
+            var string = form.inputbox.value;
+            var stringfinal = string.match(/\b\s*[A-Z0-9]{3}\s/gm).join("").replace(/\s+/g, ',');
+            document.getElementById("output").innerHTML = stringfinal;
+}
+
+            
+        </script>
+
+
+    </head>
+    
+<body>
+    <h1>Helpdesk confirm help!</h1>
+        <form name="input" action="" method="get">
+            <label for="string">String</label><br>
+            <input type="text" id="inputbox" value="">
+            <input type="button" name="button" value="click" id="" onclick="processText(this.form)">
+        </form>
+    <p id="output"></p>    
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
