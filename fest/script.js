@@ -1,4 +1,4 @@
-const arrayList = ["Mexico", "Frankrig", "The Simpsons", "Tvilling", "EM 1992", "Hattefest", "Børnefødselsdag"];
+const arrayList = ["Mexico", "Frankrig", "The Simpsons", "Tvilling", "EM 1992", "Hattefest", "Børnefødselsdag", "80's", "90's", "Superhelte", "Maskebal", "James Bond", "Genderbender", "Beach Party", "Paradise Hotel", "Pool Party", "K-Pop"];
 
 
 
