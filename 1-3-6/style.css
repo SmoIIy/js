@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+  
+  :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  
+  body {
+    min-height: 100vh;
+    background: #212534;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+  }
+  
+  
+  .card {
+    background: #191c29;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: white;
+    flex-direction: column;
+    box-shadow: 3px 1px 9px 3px rgba(101,255,247,0.75);
+    -webkit-box-shadow: 3px 1px 9px 3px rgba(101,255,247,0.75);
+    -moz-box-shadow: 3px 1px 9px 3px rgba(101,255,247,0.75);
+  }
+  h1 {
+    text-shadow: 2px 2px 5px #0000006e;
+  }
+  
+  .wrapper {
+    height: 15%;
+    width: 50%;
+    background: #11141e;
+    padding: 3px;
+    position: relative;
+    border-radius: 10px;
+    gap: 5%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: white;
+    box-shadow: 3px 1px 9px 3px rgba(101,255,247,0.75);
+    -webkit-box-shadow: 3px 1px 9px 3px rgba(101,255,247,0.75);
+    -moz-box-shadow: 3px 1px 9px 3px rgba(101,255,247,0.75);
+  }
+
+  .wrapper-item {
+    background-color: white;
+    width: 25%;
+    border-radius: 8%;
+    color: #212534;
+  }
+
+
+  
+
+  button {
+    background-color: #111827;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color,border-color,color,fill,stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    box-shadow: 3px 1px 9px 3px rgba(101,255,247,0.75);
+    -webkit-box-shadow: 3px 1px 9px 3px rgba(101,255,247,0.75);
+    -moz-box-shadow: 3px 1px 9px 3px rgba(101,255,247,0.75);
+    
+  }
+  
+  button:hover {
+    background-color: #070a10;
+  }
+  
+  button:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 3px 1px 9px 3px rgba(101,255,247,0.75);
+    -webkit-box-shadow: 3px 1px 9px 3px rgba(101,255,247,0.75);
+    -moz-box-shadow: 3px 1px 9px 3px rgba(101,255,247,0.75);
+  }
+  
+  @media (min-width: 768px) {
+    button {
+      padding: .75rem 1.5rem;
+    }
+  }
