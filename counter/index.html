@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Counter</h1>
+        <h1 class="number"><span class="value">0</span></h1>
+
+
+        <div class="counter-controls">
+            <button id="decrement" class="btn btn-primary">-</button>
+            <button id="increment" class="btn btn-primary">+</button>
+        </div>
+        <div class="change">
+            <label for="changeBy">Increment/decrement by: </label>
+            <input type="number" onchange="updateValue()" value="1" min="1" max="10" id="changeBy">
+        </div>
+        <div class="reset-button">
+            <button class="btn btn-primary">Reset</button>
+        </div>
+        
+    </div>    
+    <script>
+        const increment = document.querySelector("#increment");
+        const decrement = document.querySelector("#decrement");
+        const resetButton = document.querySelector(".reset-button");
+        const valueText = document.querySelector(".value");
+        let value = 0;
+        let n = 1;
+
+        increment.addEventListener("click", function(){
+            addNumber(n);
+        });
+        decrement.addEventListener("click", function(){
+            subtractNumber(n);
+        });
+        resetButton.addEventListener("click", function(){
+            value = 0;
+            updateText()
+        })
+
+        function updateValue() {
+            n = document.querySelector("#changeBy").value;
+
+            console.log(n);
+        }
+        function updateText(){
+            valueText.innerHTML = value;
+            parseInt(n);
+        }
+        
+        function addNumber(n){
+            value = value + n;
+            updateText()
+            console.log(value);
+            console.log("N is: " + n);
+        }
+        function subtractNumber(n){
+            value = value - n;
+            updateText()
+            console.log(value);
+            console.log("N is: " + n);
+        }
+
+    </script>
+</body>
+</html>
