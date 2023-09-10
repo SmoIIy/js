@@ -16,6 +16,7 @@ function showData(items) {
     
 }
 
+
 function showItem(item){
     console.log(item);
     const template = document.querySelector("template").content;
