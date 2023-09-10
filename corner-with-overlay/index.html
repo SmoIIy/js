@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        body {
+            height: 100vh;
+            
+            font-family: 'Heebo', sans-serif;
+        }
+        .corner-container {
+            width: 50vw;
+            display: grid;
+            grid-template-columns: 20vw 20vw;
+
+            place-items: center;
+            margin: 0rem;
+        }
+        .corner {
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0.5px solid rgb(0, 0, 0);
+            border-radius: 50% 0 0 0;
+            overflow: hidden;
+            position: relative;
+            transition: all 400ms ease;
+        }
+        .corner:hover {
+            translate: -5px -5px;
+        }
+        .corner-image {
+            background-image: url("https://images.unsplash.com/photo-1611968572459-5fd8d543a929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+            top: 0px;
+            background-size: 300%;
+            background-position: 0% 0%;
+            box-shadow: inset 0 0 20px #000000;
+            filter: saturate(50%);
+            
+        }
+        .corner:hover .corner-image {
+            animation-delay: 400ms;
+            animation: pan-image 15s linear infinite;
+            filter: saturate(100%);
+        }
+        .corner:nth-child(2) {
+            border-radius: 0 50% 0 0;
+        }
+        .corner:nth-child(2):hover {
+            translate: 5px -5px;
+        }
+        .corner:nth-child(2) .corner-image {
+            background-image: url("https://images.unsplash.com/photo-1622901641231-a570d784e5e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80");
+        }
+        .corner:nth-child(3) {
+            border-radius: 0 0 0 50%;
+        }
+        .corner:nth-child(3):hover {
+            translate: -5px 5px;
+        }
+        .corner:nth-child(3) .corner-image {
+            background-image: url("https://images.unsplash.com/photo-1601690586711-6160688c4c2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80");
+        }
+        .corner:nth-child(4) {
+            border-radius: 0 0 50% 0;
+        }
+        .corner:nth-child(4):hover {
+            translate: 5px 5px;
+        }
+        .corner:nth-child(4) .corner-image {
+            background-image: url("https://images.unsplash.com/photo-1483737946376-7c6c89443adb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80");
+        }
+        
+        .corner-content {
+            color: white;
+            z-index: 2;
+            font-size: 2rem;
+            text-shadow: 0 0 10px white;
+            background-color: #000000;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+
+
+        @keyframes pan-image {  
+  0% {
+    background-position: 36% 42%;
+    background-size: 200%;
+  }
+  
+  20% {
+    background-position: 30% 35%;
+    background-size: 200%;
+  }
+  
+  20.0001% { /* -- View 2 -- */
+    background-position: 60% 85%;
+    background-size: 500%;
+  }
+  
+  40% {
+    background-position: 49% 81%;
+    background-size: 500%;
+  }
+  
+  40.0001% { /* -- View 3 -- */
+    background-position: 80% 42%;
+    background-size: 300%;
+  }
+  
+  60% {
+    background-position: 84% 33%;
+    background-size: 300%;
+  }
+  
+  60.0001% { /* -- View 4 -- */
+    background-position: 0% 0%;
+    background-size: 300%;
+  }
+  
+  80% {
+    background-position: 15% 4%;
+    background-size: 300%;
+  }
+  
+  80.0001% { /* -- View 5 -- */
+    background-position: 80% 10%;
+    background-size: 300%;
+  }
+  
+  100% {
+    background-position: 72% 14%;
+    background-size: 300%;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="corner-container">
+        <div class="corner">
+            <div class="corner-image"></div>
+            <div class="corner-overlay"></div>
+            <h2 class="corner-content">Forår</h2>
+        </div>
+        <div class="corner">
+            <div class="corner-image"></div>
+            <div class="corner-overlay"></div>
+            <h2 class="corner-content">Sommer</h2>
+        </div>
+        <div class="corner">
+            <div class="corner-image"></div>
+            <div class="corner-overlay"></div>
+            <h2 class="corner-content">Efterår</h2>
+        </div>
+        <div class="corner">
+            <div class="corner-image"></div>
+            <div class="corner-overlay"></div>
+            <h2 class="corner-content">Vinter</h2>
+        </div>
+    </div>    
+</body>
+</html>
