@@ -10,7 +10,10 @@
 <body>
     <div class="container-md">
         <h1 class="display-1">Test</h1>
-        <p class="ingrediens-liste"></p>
+        <div class="ingrediens-liste"></div>
+        <template>
+            <p class="ingrediens"></p>
+        </template>
     </div>
     <script>
         const url = "https://hnrcndxoquhelmpaqheh.supabase.co";
@@ -38,8 +41,18 @@
         function showData(items) {
             items.forEach(showItem);
         }
+        function checkSeason(item){
+            if (item.season_1 == 2)
+            return "spring";
+        }
         function showItem(item){
             console.log(item);
+            const template = document.querySelector("template").content;
+            const copy = template.cloneNode(true);
+            copy.querySelector(".ingrediens").textContent = item.title;
+
+            const parent = document.querySelector(".ingrediens-liste");
+            parent.appendChild(copy);
         }
     </script>
 </body>
