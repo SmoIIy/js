@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingredienser</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
+    <style>
+        img {
+            max-width: 200px !important;
+        }
+    </style>
 </head>
 <body>
-    <div class="container-md">
+    <div class="container-sm">
         <h1 class="display-1">Test</h1>
         <div class="ingrediens-liste"></div>
         <template>
-            <p class="ingrediens"></p>
+            <p class="ingrediens"></p>¨
+            <img class="image img-thumbnail" src="" alt="">
         </template>
     </div>
     <script>
@@ -28,7 +33,7 @@
         }
         
 
-        fetch(url+"/rest/v1/Dataset",{
+        fetch(url+"/rest/v1/dataset",{
             method: "GET",
             headers: {
             apikey: apikey
@@ -41,14 +46,21 @@
         function showData(items) {
             items.forEach(showItem);
         }
-        function checkSeason(item){
-            if (item.season_1 == 2)
+
+        function checkSeason(season){
+            if (item.aarstid == foraar)
             return "spring";
         }
+
         function showItem(item){
+            //check om items poster
             console.log(item);
+
+
+
             const template = document.querySelector("template").content;
             const copy = template.cloneNode(true);
+            copy.querySelector(".image").src = item.profile_image_src;
             copy.querySelector(".ingrediens").textContent = item.title;
 
             const parent = document.querySelector(".ingrediens-liste");

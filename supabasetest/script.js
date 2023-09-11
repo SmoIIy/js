@@ -1,4 +1,4 @@
-const url = "https://hnrcndxoquhelmpaqheh.supabase.co/rest/v1/Dataset";
+const url = "https://hnrcndxoquhelmpaqheh.supabase.co/rest/v1/dataset?aarstid=eq.sommer";
 const apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhucmNuZHhvcXVoZWxtcGFxaGVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM4MjI5MTksImV4cCI6MjAwOTM5ODkxOX0.Kj0vgWH3imfxSBjrhKN9746mppt3v9ldhd1y2ugyfyc";
 
 fetch(url,{
